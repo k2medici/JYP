@@ -1,0 +1,582 @@
+/* RESET AREA ↓↓↓↓↓↓↓↓↓↓ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ RESET AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ RESET Plus AREA ↓↓↓↓↓↓↓↓↓↓ */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ RESET Plus AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ COMMON AREA ↓↓↓↓↓↓↓↓↓↓ */
+html, body {
+    box-sizing: border-box;
+}
+.wrap {
+    width: 100%;
+    position: relative;
+    font-family: 'Noto Sans KR', 'Times New Roman', Times;
+    font-size: 16px;
+}
+.container {
+    width: 83.7vw;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    /* border: 1px solid red; */
+}
+.clearfix:after {
+    content:"";
+    clear:both;
+    display:block;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ COMMON AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ HEADER AREA ↓↓↓↓↓↓↓↓↓↓ */
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(99, 99, 99, 0.8);
+}
+header .menu {
+    width: 100%;
+    height: 100px;
+    display: block;
+    position: relative;
+}
+header .menu .logo {
+    width: 20%;
+    height: 100px;
+    float: left;
+}
+header .menu .logo h1 {
+    height: 100%;
+}
+header .menu .logo h1 a {
+    width: 100%;
+    height: 100%;
+}
+header .menu .logo h1 a img {
+    width: 200px;
+    height: 100px;
+}
+header .menu .navi {
+    width: 60%;
+    color: white;
+    float: right;
+}
+header .menu .navi ul {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+header .menu .navi ul li {
+    width: 100%;
+    line-height: 100px;
+    display: flex;
+}
+header .menu .navi ul li a {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: block;
+}
+header .menu .navi-ghost {
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 10%;
+    display: none;
+}
+header .menu .navi-ghost:hover {
+    border: 2px solid #ffffff;
+}
+header .menu .navi-ghost .ghost-on {
+    width: 100%;
+    position: absolute;
+}
+header .menu .navi-ghost .ghost-off {
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ HEADER AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ SECTION HOME AREA ↓↓↓↓↓↓↓↓↓↓ */
+#home {
+    width: 100%;
+    height: 937px;
+    background-color: #1199ee;
+}
+#home .main {
+    width: 100%;
+    height: 720px;
+    position: relative;
+    margin-top: 100px;
+    background-color: yellow;
+}
+#home .main .main-banner {
+    width: 100%;
+}
+#home .main .main-banner ul {
+    width: 100%;
+    height: 937px;
+    position: relative;
+    animation-name: bani;
+    animation-duration: 5s;
+    animation-timing-function: steps(4);
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+@keyframes bani {
+    from{
+        left: 0;
+    }
+    to{
+        left: -400%;
+    }
+}
+#home .main .main-banner ul:active {
+    animation-play-state: paused;
+}
+#home .main .main-banner ul li {
+    width: 100%;
+    height: 100%;
+}
+#home .main .main-banner ul li:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+#home .main .main-banner ul li:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    z-index: 1;
+}
+#home .main .main-banner ul li:nth-child(3) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 200%;
+    z-index: 2;
+}
+#home .main .main-banner ul li:nth-child(4) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 300%;
+    z-index: 3;
+}
+#home .main .main-loading {
+    width: 50px;
+    height: 50px;
+    border: 3px dotted red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+    z-index: 20;
+    animation-name: loading;
+    animation-duration: 3.6s;
+    animation-timing-function: linear;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#home .main .main-loading:active {
+    animation-play-state: paused;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ SECTION HOME AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ SECTION ABOUT AREA ↓↓↓↓↓↓↓↓↓↓ */
+#about {
+    width: 100%;
+    height: 937px;
+    background-color: #51f5e2;
+    /* overflow: hidden; */
+}
+#about .about {
+    width: 100%;
+    height: 720px;
+    background-color: magenta;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#about .about .about-img {
+    width: 100%;
+    height: 300px;
+}
+#about .about .about-img img {
+    max-width: 830px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+#about .about .about-txt {
+    width: 100%;
+    height: 400px;
+}
+#about .about .about-txt p {
+    padding: 10px;
+    font-size: calc(120% + 1vw - 1.5vh + 0.25em);
+    color: #333333
+}
+/* ↑↑↑↑↑↑↑↑↑↑ SECTION ABOUT AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ SECTION ARTIST AREA ↓↓↓↓↓↓↓↓↓↓ */
+#artist {
+    width: 100%;
+    height: 937px;
+    background-color: #71db80;
+    overflow: hidden;
+}
+#artist .artist {
+    width: 100%;
+    height: 720px;
+    background-color: pink;
+    margin-top: 100px;
+}
+#artist .artist .artist-list {
+    width: 20%;
+    height: 720px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1px;
+    float: left;
+}
+#artist .artist .artist-list input {
+    display: none;
+}
+#artist .artist .artist-list label {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #1199ee;
+    display: block;
+}
+#art-rdo1:checked+label,
+#art-rdo2:checked+label,
+#art-rdo3:checked+label,
+#art-rdo4:checked+label,
+#art-rdo5:checked+label,
+#art-rdo6:checked+label,
+#art-rdo7:checked+label,
+#art-rdo8:checked+label,
+#art-rdo9:checked+label {
+    font-weight: bold;
+    color: white;
+}
+#artist .artist ul {
+    width: 80%;
+    height: 720px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+}
+#artist .artist ul li {
+    width: 100%;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+}
+#artist .artist ul li .artist-img {
+    width: 100%;
+    height: 510px;
+    display: block;
+    position: relative;
+}
+#artist .artist ul li .artist-img img {
+    max-width: 648px;
+    min-width: 350px;
+    max-height: 500px;
+    min-height: 270px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 324px);
+}
+#artist .artist ul li .artist-txt {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    display: block;
+    color: #ffffff;
+    background-color: rgba(11, 11, 11, 0.5);
+}
+#artist .artist ul li .artist-txt h3 {
+    font-size: 2rem;
+    margin: 10px 20px;
+}
+#artist .artist ul li .artist-txt p {
+    font-size: 1rem;
+    margin: 10px 20px;
+}
+#artist .artist ul li:not(:first-child) {
+    display: none;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ SECTION ARTIST AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ SECTION NEWS AREA ↓↓↓↓↓↓↓↓↓↓ */
+#news {
+    width: 100%;
+    height: 937px;
+    background-color: #f5e029;
+    overflow: hidden;
+}
+#news .news {
+    width: 100%;
+    height: 720px;
+    background-color: lime;
+    margin-top: 100px;
+    display: flex;
+    justify-content: normal;
+    gap: 10px;
+}
+#news .news .news-1 {
+    width: 100%;
+    height: 720px;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr 4fr;
+}
+#news .news .news-1 .news-1-img {
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#news .news .news-1 .news-1-img img {
+    max-width: 790px;
+    min-width: 100%;
+    max-height: 450px;
+    min-height: 100%;
+}
+#news .news .news-1 .news-1-txt {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#news .news .news-1 .news-1-txt h4 {}
+#news .news .news-1 .news-1-txt p {}
+#news .news .news-2 {
+    width: 100%;
+    height: 720px;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr 4fr;
+}
+#news .news .news-2 .news-2-img {
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#news .news .news-2 .news-2-img img {
+    max-width: 790px;
+    min-width: 100%;
+    max-height: 450px;
+    min-height: 100%;
+}
+#news .news .news-2 .news-2-txt {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#news .news .news-2 .news-2-txt h4 {}
+#news .news .news-2 .news-2-txt p {}
+/* ↑↑↑↑↑↑↑↑↑↑ SECTION NEWS AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ SECTION AUDITION AREA ↓↓↓↓↓↓↓↓↓↓ */
+#audition {
+    width: 100%;
+    height: 937px;
+    background-color: #eb7c32;
+    overflow: hidden;
+}
+#audition .audition {
+    width: 100%;
+    height: 648px;
+    box-sizing: border-box;
+    background-color: aqua;
+    margin-top: 100px;
+    display: flex;
+}
+#audition .audition .audi-img {
+    width: 41.46%;
+}
+#audition .audition .audi-txt {
+    width: 41.46%;
+    display: flex;
+    flex-direction: column;
+}
+#audition .audition .audi-txt .audi-txt-1 {
+    width: 100%;
+}
+#audition .audition .audi-txt .audi-txt-2 {
+    width: 100%;
+}
+/* ↑↑↑↑↑↑↑↑↑↑ SECTION AUDITION AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ FOOTER AREA ↓↓↓↓↓↓↓↓↓↓ */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+}
+footer .footer {
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+}
+footer .footer .f-logo {
+    width: 20%;
+}
+footer .footer .f-logo a {}
+footer .footer .f-logo a img {
+    width: 100%;
+    height: 90px;
+}
+footer .footer .f-article {
+    width: 60%;
+    margin: 0 10%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+footer .footer .f-article address {}
+footer .footer .f-article p {}
+footer .footer .copyright {
+    width: 20%;
+    /* border: 1px solid red; */
+}
+/* ↑↑↑↑↑↑↑↑↑↑ FOOTER AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ parallax scrolling AREA ↓↓↓↓↓↓↓↓↓↓ */
+/* ↑↑↑↑↑↑↑↑↑↑ parallax scrolling AREA ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓ MEDIA QUERY AREA ↓↓↓↓↓↓↓↓↓↓ */
+@media (max-width: 768px) {
+    header .menu .navi-ghost {
+        display: block;
+        z-index: 100;
+    }
+    header .menu .navi {
+        width: 60%;
+        height: 100vh;
+        color: white;
+        float: right;
+    }
+    header .menu .navi ul {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .menu .navi ul li {
+        width: 100%;
+        line-height: 100px;
+        display: flex;
+    }
+    header .menu .navi ul li a {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        display: block;
+    }
+}
+/* ↑↑↑↑↑↑↑↑↑↑ MEDIA QUERY AREA ↑↑↑↑↑↑↑↑↑↑ */
